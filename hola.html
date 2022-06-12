@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    const ws = new WebSocket('ws://localhost:8485/ws')
+    ws.addEventListener("open", (res)=>{
+        console.log('Connected')
+    })
+    ws.addEventListener("message", (res)=>{
+        console.log(res.data)
+    })
+    
+</script>
+</body>
+</html>
