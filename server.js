@@ -15,11 +15,11 @@ wss.on('connection', ws=> {
     ws.send(id)
     ws.on('message', (messageAsString) => {
         const data = JSON.parse(messageAsString)
-        const username =data.clientId;
+        const username =data.username;
         if (data.action === 'connect' ){
             const metadata = { id, username};
             clients.set(ws, metadata);
-            //console.log(clients.get(ws))
+            console.log(clients.get(ws))
         }
     })
     ws.on("close", () => {
