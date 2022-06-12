@@ -5,15 +5,26 @@
     <title>Title</title>
 </head>
 <body>
-
+<button onclick="sendss()" >sajkkas</button>
 <script>
-    const ws = new WebSocket('ws://localhost:8485/ws')
+    let clientId
+    const ws = new WebSocket('ws://localhost:8485/api/v1/ws/game1')
     ws.addEventListener("open", (res)=>{
         console.log('Connected')
     })
+
     ws.addEventListener("message", (res)=>{
         console.log(res.data)
+        clientId = res.data
     })
+    function sendss(){
+        const payLoad = {
+            'action': 'connect',
+            'clientId': clientId
+        }
+        ws.send(JSON.stringify(payLoad))
+
+    }
     
 </script>
 </body>
