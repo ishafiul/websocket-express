@@ -1,0 +1,8 @@
+
+services:
+  app:
+    container_name: ishaf-ws-game
+    restart: always
+    build: .
+    ports:
+      - '8081:3000'

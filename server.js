@@ -4,7 +4,7 @@ const server = require('http').createServer(app);
 const WebSocket = require('ws');
 require("dotenv").config();
 
-const port = process.env.PORT || 8485;
+const port = process.env.PORT || 3000;
 
 const wss = new WebSocket.Server({server: server, path: '/api/v1/ws/game1'});
 
@@ -222,6 +222,6 @@ function heartbeat() {
     this.isAlive = true;
 }
 
-app.get('/', (req, res) => res.send('Hello World!'))
+app.get('/', (req, res) => res.sendFile('index.html',{root:app.get('views')}))
 
-server.listen(port, () => console.log(`Lisening on port ${port}`))
+server.listen(port, () => console.log(`Listening on port ${port}`))
