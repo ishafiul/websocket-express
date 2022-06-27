@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="game2">
+    <div class="game2-header">
+        <div class="" id="connect-box">
+            <form id="userform">
+                <input id="username" name="username" type="text" class="input-text" required />
+                <button type="submit" name="submit" class="btn" id="connect">connect</button>
+            </form>
+        </div>
+        <div id="userInfo"></div>
+        <button class="btn" id="create" onclick="createNewGame()">Create Game</button>
+    </div>
+
+    <div class="game-container">
+        <div>
+            <div>Available Games</div>
+            <div id="gameList"></div>
+        </div>
+        <div class="" style="width: 100%;" id="gameBoard">
+            <div  id="result"></div>
+            <div class="game-board">
+                <div class="player">
+                    player1
+                    <div id="player1" >
+                        dfs
+                    </div>
+                </div>
+                <div class="game-card-container">
+                    <div>
+                        <div class=" card-row" id="cards">
+                        </div>
+                    </div>
+                </div>
+                <div class="player">
+                    player2
+                    <div id="player2" >
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="chat-box">
+            <h2>Chat Box</h2>
+            <br>
+            <div id="global-chat">
+                <h4>Global</h4>
+                <div class="message-input">
+                    <textarea rows="5"> </textarea>
+                    <button class="send"> Send</button>
+                </div>
+            </div>
+            <div id="in-game-chat">
+                <h4>In Game</h4>
+                <div class="message-input">
+                    <textarea rows="5"> </textarea>
+                    <button class="send"> Send</button>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+    <script src="./client/client.js"></script>
+    <script src="./client/commonScript.js"></script>
+</div>
+</body>
+</html>
