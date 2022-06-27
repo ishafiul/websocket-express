@@ -1,8 +1,10 @@
-# Game2
+# A Websocket Based Multiplayer Game.
 
 ## [Live Demo](https://l0053r-451f.github.io/GuessNumberGame/game2.html)
 
-**Note:** you may face some issues with **'Websocket Heartbeat Keep Alive'** for heroku server. use locally, its the best :unamused:
+**Note:** you may face some issues with **'Websocket Heartbeat Keep Alive'** for heroku server. use locally, its the best :unamused: . and this is the main [Repo](https://l0053r-451f.github.io/GuessNumberGame) where i tried to collaborate with may friend a little 
+
+Main purpose of this repo is to learn websocket basic without any library like socket.io or sockjs and basic docker
 
 ## WS APIs
 **End Point:** `api/v1/ws/game1`
